@@ -1,0 +1,361 @@
+@mixin margins {
+  margin: 5px 5px 5px 5px;
+}
+
+@mixin textright {
+  text-align: right;
+}
+
+@mixin margintop {
+  margin-top: 10% !important;
+}
+
+@mixin low-opacity {
+  opacity: 0.6;
+}
+
+em{
+  font-size: large;
+}
+
+.margin{
+  @include margins;
+}
+
+button {
+  @include margins;
+}
+
+span, p{
+  font-size: 17px;
+}
+
+img {
+  position: static;
+  display: block;
+
+  &.round-image {
+    width: 25%;
+    border: 5px solid #000;
+    border-radius: 50%;
+    -o-object-fit: fill;
+    object-fit: fill;
+    vertical-align: middle;
+
+    &.left {
+      margin: 0% 0% -17% auto;
+    }
+  }
+
+  &.medium-image {
+    width: 50%;
+  }
+
+  &.small-image {
+    width: 80%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: scale-down;
+  }
+}
+
+.card-size{
+  width: 90%;
+  height: 100%;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  @include margins;
+  color: #1a1b1f;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  opacity: 0.6;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+section {
+  margin-top: 0px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 34px;
+  font-weight: 400;
+  @include margins;
+}
+
+p{
+  margin-top: 3px;
+  margin-left: 5px;
+  ;
+}
+
+
+.home-nav {
+  @include textright;
+}
+
+.navigation-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 80%;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  justify-items: end;
+  -webkit-align-content: end;
+  -ms-flex-line-pack: end;
+  align-content: end;
+  grid-auto-flow: row;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+  background-image: none;
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-clip: content-box;
+  -webkit-text-fill-color: inherit;
+}
+
+.low-opacity {
+  @include low-opacity;
+  @include margins;
+}
+
+.heading {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 64px;
+  line-height: 80px;
+  text-transform: none;
+}
+
+.grid {
+  margin-bottom: 80px;
+  padding-right: 10px;
+  padding-left: 10px;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-areas:
+    ". . ."
+    ". . .";
+}
+
+.margin-top {
+  @include margintop();
+}
+
+.small-margin-top{
+  margin-top: 20px;
+}
+
+.align-left {
+  float: left;
+}
+
+.align-right {
+  float: right;
+}
+
+.display-grid{
+  display: grid;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.38);
+  overflow: hidden;
+  padding: 0 16px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+}
+
+.red {
+color: rgb(138, 45, 45);
+}
+
+.green {
+color: rgb(42, 132, 42);
+}
+
+.likeText{
+  background-image: linear-gradient(#032d50 25%, #00a1ef 35%, white 50%, #20125f 50%, #8313e7 55%, #ff61af 75%);
+  -webkit-text-stroke: 0.01em #94a0b9;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 45px;
+  padding: 5px;
+}
+
+.display-contents{
+display: contents;
+}
+
+mat-form-field {
+  padding: 5px;
+}
+
+
+
+.things > .content {
+  float: left;
+  width: 50%;
+  height: 500px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.things > .content h1 {
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  height: 150px;
+  color: #89323B;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,300;0,600;0,800;1,300);
+
+body {
+	font-family: 'Glory', cursive;
+	background: linear-gradient(-0.25turn, #f4f4f4, #d6d6d6);
+	padding: 30px;
+}
+
+.paper {
+  margin: auto;
+  width: 50%;
+	padding: 18px;
+	background-color: white;
+	border-radius: 3px;
+	box-shadow: 5px 15px 30.4px grey;
+}
+
+b {
+	font-weight: 600;
+}
+
+.center-text{
+  text-align:center
+}
+
+.wrapper {
+  display: grid;
+  place-content: center;
+  background-color: var(--background-color);
+  min-height: 100vh;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(1.5rem, 1rem + 18vw, 15rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.wrapper > div {
+  grid-area: 1/1/-1/-1;
+}
+.top {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+}
+
+.bottom {
+  clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+  color: transparent;
+  background: -webkit-linear-gradient(177deg, black 53%, var(--text-color) 65%);
+  background: linear-gradient(177deg, black 53%, var(--text-color) 65%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform: translateX(-0.02em);
+}
+
+.margin-bottom{
+  margin-bottom: 15px;;
+}
+
+.like{
+  font-size: 25px;
+
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #14a170 0%,
+    #113b4c 29%,
+    #0dbc2d 67%,
+    #08ea8c 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+}
+
+
+.dontlike{
+  font-size: 25px;
+
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #6c0a48 0%,
+    #b72e37 29%,
+    #da7508 67%,
+    #fe006a 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+}
+
